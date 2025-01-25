@@ -27,8 +27,9 @@ function calculateScore() {
     const outputDiv = document.getElementById("output");
     const totalScoreEl = document.getElementById("totalScore");
     const scoreMessageEl = document.getElementById("output2");
-    const secretWord = "PUSSY"; // Replace this with your desired secret word
-    const secretWordTwo = "PENIS"; // Replace this with your desired secret word
+    const secretWord = "CORAL"; // Replace this with your desired secret word
+    const secretWordTwo = "MORAL"; // Replace this with your desired secret word
+    const secretWordThree = "AURAL"; // Replace this with your desired secret word
     const body = document.body; // Access the page body
 
     outputDiv.innerHTML = ""; // Clear previous results
@@ -45,6 +46,16 @@ function calculateScore() {
         body.style.backgroundColor = "black"; // Turn the page red
         return; // Skip the rest of the scoring logic
     }
+
+    if (input === secretWordThree) {
+        
+        body.style.backgroundColor = "green"; // Turn the page green
+        body.style.color = "blue";  //Turn the font blue
+        body.style.fontSize = "5rem"; //Turn the font HUGE
+        return; // Skip the rest of the scoring logic
+    }
+
+
 
 
 
@@ -285,6 +296,8 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById("analyzeVowelUsage").addEventListener("click", displayVowelStats);
     document.getElementById("pageHeader").addEventListener("click", () => {
         document.body.style.backgroundColor = ""; // Reset to default background color
+        document.body.style.color = ""; // Reset to default color
+        document.body.style.fontSize = ""; // Reset to default background fontSize
     });
 });
 
