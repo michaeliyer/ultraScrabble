@@ -22,16 +22,32 @@ function displayFilteredWords(prefix) {
         : 'No words found.';
 }
 
-// Calculate and display Scrabble score
 function calculateScore() {
     const input = document.getElementById("inputText").value.toUpperCase();
     const outputDiv = document.getElementById("output");
     const totalScoreEl = document.getElementById("totalScore");
     const scoreMessageEl = document.getElementById("output2");
+    const secretWord = "PUSSY"; // Replace this with your desired secret word
+    const secretWordTwo = "PENIS"; // Replace this with your desired secret word
+    const body = document.body; // Access the page body
 
     outputDiv.innerHTML = ""; // Clear previous results
     totalScoreEl.innerText = ""; // Clear total score
     scoreMessageEl.innerText = ""; // Clear message
+
+    // Check if the secret word was entered
+    if (input === secretWord) {
+        body.style.backgroundColor = "red"; // Turn the page red
+        return; // Skip the rest of the scoring logic
+    }
+
+    if (input === secretWordTwo) {
+        body.style.backgroundColor = "black"; // Turn the page red
+        return; // Skip the rest of the scoring logic
+    }
+
+
+
 
     if (!wordList.includes(input)) {
         totalScoreEl.innerText = "That's not a valid word!";
@@ -73,24 +89,8 @@ function calculateScore() {
     }, delay);
 }
 
-// Generate message based on score
-// function getScoreMessage(totalScore) {
-//     if (totalScore <= 5) return "That's a terrible score.";
-//     if (totalScore <= 9) return "Better than that 5-point crap, but you are not good at this.";
-//     if (totalScore <= 11) return "Very weak, but you're trying. That's worth something they say.";
-//     if (totalScore <= 13) return "Now you're playing some scrabble. Not.";
-//     if (totalScore <= 15) return "Ok, real points. Much better.";
-//     if (totalScore <= 17) return "Pretty good. You are not wasting your time.";
-//     if (totalScore <= 19) return "Very nice. You must play a lot";
-//     if (totalScore <= 21) return "Okay! Now you're talking! That's really nice!";
-//     if (totalScore <= 23) return "Now you're pushing it, pally. Are you stashing tiles?";
-//     if (totalScore <= 25) return "You've got big old balls coming around here with that shit. Don't think dropping Q's and Z's and J's goes unnoticed...";
-//     if (totalScore <= 27) return "Maybe someone needs to teach you a little lesson, essay! Maybe we don't deal too well with cheaters around here. You were warned and now it's too late!";
-//     if (totalScore <= 29) return "You're dead to me, fuckface. You're ruined around here.";
-//     if (totalScore <= 30) return "You will be reported if you don't fuck off right this moment!";
 
-//     return "Get fucked. This is you being ghosted. You are totally unloved.";
-// }
+// Generate message based on score
 
 function getScoreMessage(totalScore) {
     if (totalScore === 5) return "That's the minimum score for a 5 point word according to Scrabble. It’s an embarrassment.";
@@ -194,130 +194,6 @@ function displayVowelStats() {
 }
 
 
-
-
-// Function: Analyze Letter Frequency by Position    Practice 1
-// function analyzeLetterFrequency() {
-//     const letterStats = {};
-
-//     // Loop through each word in the word list
-//     wordList.forEach((word) => {
-//         [...word.toUpperCase()].forEach((letter, index) => {
-//             // Initialize stats for the letter if not already added
-//             if (!letterStats[letter]) {
-//                 letterStats[letter] = { counts: [0, 0, 0, 0, 0], total: 0 };
-//             }
-
-//             // Increment the position-specific count and total count for the letter
-//             letterStats[letter].counts[index] = (letterStats[letter].counts[index] || 0) + 1;
-//             letterStats[letter].total++;
-//         });
-//     });
-
-//     // Calculate percentages for each letter in each position
-//     const totalWords = wordList.length;
-//     Object.keys(letterStats).forEach((letter) => {
-//         letterStats[letter].percentages = letterStats[letter].counts.map(
-//             (count) => ((count / totalWords) * 100).toFixed(2) // Convert to percentage
-//         );
-//     });
-
-//     return letterStats;
-// }
-
-// Function: Analyze Letter Frequency by Position    Practice 2
-// function analyzeLetterFrequency() {
-//     const letterStats = {};
-
-//     // Loop through each word in the word list
-//     wordList.forEach((word) => {
-//         [...word.toUpperCase()].forEach((letter, index) => {
-//             // Initialize stats for the letter if not already added
-//             if (!letterStats[letter]) {
-//                 letterStats[letter] = { counts: [0, 0, 0, 0, 0], total: 0 };
-//             }
-
-//             // Increment the position-specific count and total count for the letter
-//             letterStats[letter].counts[index] = (letterStats[letter].counts[index] || 0) + 1;
-//             letterStats[letter].total++;
-//         });
-//     });
-
-//     // Calculate percentages for each letter in each position
-//     const totalWords = wordList.length;
-//     Object.keys(letterStats).forEach((letter) => {
-//         letterStats[letter].percentages = letterStats[letter].counts.map(
-//             (count) => ((count / totalWords) * 100).toFixed(2) // Convert to percentage
-//         );
-//     });
-
-//     return letterStats;
-// }
-
-
-
-
-// Display Results  Practice 1
-// function displayLetterFrequencyStats() {
-//     const resultDiv = document.getElementById("letterFrequencyOutput");
-//     const letterStats = analyzeLetterFrequency();
-
-//     // Clear any existing content
-//     resultDiv.innerHTML = "<strong>Letter Frequency Analysis:</strong><br><br>";
-
-//     // Create clickable links for each letter
-//     Object.keys(letterStats).forEach((letter) => {
-//         const letterLink = document.createElement("a");
-//         letterLink.href = "#";
-//         letterLink.textContent = `${letter} (${letterStats[letter].total})`;
-//         letterLink.style.marginRight = "10px";
-//         letterLink.style.textDecoration = "underline";
-//         letterLink.style.cursor = "pointer";
-
-//         // Create a div to show/hide stats for this letter
-//         const statsDiv = document.createElement("div");
-//         statsDiv.id = `stats-${letter}`;
-//         statsDiv.style.display = "none"; // Initially hidden
-
-//         const { counts, percentages } = letterStats[letter];
-//         let statsHtml = "";
-//         counts.forEach((count, index) => {
-//             statsHtml += `Position ${index + 1}: ${count} occurrences (${percentages[index]}%)<br>`;
-//         });
-//         statsDiv.innerHTML = statsHtml;
-
-//         // Add click event to toggle stats visibility
-//         letterLink.addEventListener("click", (event) => {
-//             event.preventDefault();
-//             statsDiv.style.display = statsDiv.style.display === "none" ? "block" : "none";
-//         });
-
-//         // Append the letter link and stats div to the output container
-//         resultDiv.appendChild(letterLink);
-//         resultDiv.appendChild(statsDiv);
-//     });
-// }
-
-// Display Results  Practice 2
-// function displayLetterFrequencyStats() {
-//     const resultDiv = document.getElementById("letterFrequencyOutput");
-//     const letterStats = analyzeLetterFrequency();
-
-//     let output = "<strong>Letter Frequency Analysis:</strong><br><br>";
-
-//     // Build output for each letter
-//     Object.keys(letterStats).forEach((letter) => {
-//         const { counts, percentages } = letterStats[letter];
-//         output += `<strong>${letter}:</strong><br>`;
-//         counts.forEach((count, index) => {
-//             output += `Position ${index + 1}: ${count} occurrences (${percentages[index]}%)<br>`;
-//         });
-//         output += `<br>`;
-//     });
-
-//     resultDiv.innerHTML = output;
-// }
-
 function analyzeLetterFrequency() {
     const letterStats = {};
     const positionTotals = [0, 0, 0, 0, 0]; // Tracks the number of words with each position available
@@ -396,17 +272,6 @@ function displayLetterFrequencyStats() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 // Attach filtering and scoring functionality on page load
 window.addEventListener('DOMContentLoaded', () => {
     document.getElementById("filterButton").addEventListener("click", () => {
@@ -418,6 +283,9 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById("filterByScore").addEventListener("click", displayWordsByScore);
     document.getElementById("analyzeLetterFrequency").addEventListener("click", displayLetterFrequencyStats);
     document.getElementById("analyzeVowelUsage").addEventListener("click", displayVowelStats);
+    document.getElementById("pageHeader").addEventListener("click", () => {
+        document.body.style.backgroundColor = ""; // Reset to default background color
+    });
 });
 
 // Filter words by letter and position

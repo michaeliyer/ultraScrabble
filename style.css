@@ -100,6 +100,34 @@ input, button {
 
 
 
+
+
+
+
+/* @keyframes burst {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(2);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+.burst {
+    display: inline-block;
+    animation: burst 1s ease-out forwards;
+    color: gold;
+} */
+
+
+
+
 /* Default styles (applies to all screen sizes) */
 
  /* h1, h2 {
