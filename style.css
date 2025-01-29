@@ -12,9 +12,13 @@ h1, h2 {
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: rgba(31, 133, 123, 0.407);
-    color: rgb(113, 109, 172);
+    background-color: rgba(213, 127, 41, 0.914);
+    color: rgb(176, 144, 135);
     padding: 20px;
+}
+
+#scoreOutput {
+    color: rgb(85, 20, 146);
 }
 
 .section {
@@ -27,13 +31,16 @@ body {
     justify-content: center;
     margin-top: 20px;
     font-size: 16px;
+    /* color: rgb(237, 76, 6); */
     color: rgb(113, 109, 172);
 }
 
 #output2, #totalScore {
     margin-top: 15px;
     font-size: 18px;
-    color: rgb(70, 14, 224);
+    color: rgb(113, 109, 172);
+
+    /* color: rgb(70, 14, 224); */
 }
 
 .letter-box {
@@ -78,13 +85,18 @@ input, button {
 #wordListOutput
  {
     font-size: 10px;
+    color: rgb(89, 0, 255);
 }
 
 
-
+#vowelUsageOutput,
+#letterFrequencyOutput {
+    color: rgb(85, 20, 146);
+}
 
 #letterFrequencyOutput a {
-    color: rgb(21, 0, 255);
+    color: rgb(60, 54, 121);
+    /* color: rgb(255, 128, 0); */
     margin-right: 10px;
     text-decoration: underline;
     cursor: pointer;
@@ -94,6 +106,7 @@ input, button {
     margin-left: 20px;
     margin-bottom: 10px;
 }
+
 
 
 
