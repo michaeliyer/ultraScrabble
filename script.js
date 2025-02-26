@@ -331,6 +331,7 @@ document.getElementById("filterByLetterAndPosition").addEventListener("click", d
 
 
 console.log(fixedWordsLarge);
+console.log(letterValues);
 
 
 
