@@ -11367,8 +11367,8 @@ export const wordleWords = [
         myScore: 3,
         wordNumber: 1433,
       },
-      word: "SHUCK",
       {
+        word: "SHUCK",
         gameDate: "5/23/25",
         myScore: 3,
         wordNumber: 1434,
