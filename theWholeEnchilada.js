@@ -11367,8 +11367,8 @@ export const wordleWords = [
         myScore: 3,
         wordNumber: 1433,
       },
+      word: "SHUCK",
       {
-        word: "SHUCK",
         gameDate: "5/23/25",
         myScore: 3,
         wordNumber: 1434,
@@ -11499,6 +11499,12 @@ export const wordleWords = [
         myScore: 4,
         wordNumber: 1455,
       }, 
+      {
+        word: "GHOST",
+        gameDate: "6/14/25",
+        myScore: 3,
+        wordNumber: 1456,
+      },
     
     
   ];
@@ -11511,4 +11517,3 @@ export const letterValues = {
 console.log("this works goddamn fucking great");
 console.log("real eefin nice like, Girly Girl!")
 console.log("Push, Stash, and Pop. What the Chryste!")
-
