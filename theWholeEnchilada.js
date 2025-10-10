@@ -1322,7 +1322,7 @@ export const dailyWordsSmall = [
     'ABBOT', 'ABHOR', 'ABLED', 'ABODE', 'ABORT', 'ABUSE', 
     'ADORN', 'AFIRE', 'AFOOT', 'AFOUL', 'AIDER', 'ALGAE',
     'ALIBI', 'ALIGN', 'ALLAY', 'ALLEY', 'ALLOT', 'ALLOY', 'AMAZE', 'AMEND',
-    'AMITY', 'AMONG', 'AMPLY', 'ANIME', 'ANKLE', 'ANNOY',
+    'AMITY', 'AMONG', 'AMPLY', 'ANIME', 'ANKLE',
     'ANNUL', 'APING', 'APNEA', 'ARENA', 'ARISE', 'ARMOR', 'AROSE', 'ARRAY', 
     'ARSON', 'ATTIC', 'AUGUR', 'AUNTY', 'AVIAN', 'AVOID', 
     'AWOKE', 'AXIAL', 'AXION', 'BAGGY', 'BARON',
@@ -1370,7 +1370,7 @@ export const dailyWordsSmall = [
     'GRAPE', 'GRASS', 'GRAVE', 'GRAVY', 'GRAZE', 'GRILL', 
     'GROPE', 'GROSS', 'GRUFF', 'GRUNT', 'GUAVA', 'GUESS', 'GUILT',
     'GUISE', 'GULCH', 'GUMBO', 'GUSTO', 'GYPSY', 'HALAL', 
-    'HARDY', 'HAREM', 'HARPY', 'HARRY', 'HASTE', 'HASTY', 'HAUTE', 'HAVEN',
+    'HAREM', 'HARPY', 'HARRY', 'HASTE', 'HASTY', 'HAUTE', 'HAVEN',
     'HEDGE', 'HIPPY', 'HOIST', 'HOLLY', 
     'HONOR', 'HORNY', 'HOTLY', 'HOVEL', 'HUMUS', 'HUSKY', 'HUSSY', 'HYDRO',
     'HYMEN', 'ICILY', 'IDEAL', 'IDIOT', 'IDYLL', 'ILIAC', 
@@ -1488,7 +1488,7 @@ export const dailyWordsLarge = [
     'ANCLE', 'ANCON', 'ANDRO', 'ANEAR', 'ANELE', 'ANENT', 'ANGAS', 
     'ANGLO', 'ANIGH', 'ANILE', 'ANILS', 'ANIMA', 'ANIME', 'ANIMI', 'ANION',
     'ANISE', 'ANKER', 'ANKHS', 'ANKLE', 'ANKUS', 'ANLAS', 'ANNAL', 'ANNAS', 'ANNAT', 
-    'ANNOY', 'ANNUL', 'ANOAS', 'ANOLE', 'ANOMY', 'ANSAE', 'ANTAE', 'ANTAR', 'ANTAS',
+    'ANNUL', 'ANOAS', 'ANOLE', 'ANOMY', 'ANSAE', 'ANTAE', 'ANTAR', 'ANTAS',
     'ANTED', 'ANTES', 'ANTIS', 'ANTRA', 'ANTRE', 'ANTSY', 'ANURA', 'ANYON',
     'APACE', 'APAGE', 'APAID', 'APAYD', 'APAYS', 'APEAK', 'APEEK', 'APERS',
     'APERT', 'APERY', 'APGAR', 'APHIS', 'APIAN', 'APING', 'APIOL', 'APISH', 'APISM',
@@ -1936,7 +1936,7 @@ export const dailyWordsLarge = [
     'HALON', 'HALOS', 'HALSE', 'HALTS', 'HALVA', 'HALWA', 'HAMAL', 'HAMBA', 'HAMED',
     'HAMES', 'HAMMY', 'HAMZA', 'HANAP', 'HANCE', 'HANCH', 'HANDS', 'HANGI', 'HANGS',
     'HANKS', 'HANKY', 'HANSA', 'HANSE', 'HANTS', 'HAOMA', 'HAPAX', 'HAPLY', 'HAPPI',
-    'HAPUS', 'HARAM', 'HARDS', 'HARDY', 'HARED', 'HAREM', 'HARES', 'HARIM', 'HARKS', 'HARLS',
+    'HAPUS', 'HARAM', 'HARDS', 'HARED', 'HAREM', 'HARES', 'HARIM', 'HARKS', 'HARLS',
     'HARMS', 'HARNS', 'HAROS', 'HARPS', 'HARPY', 'HARRY', 'HARTS', 'HASHY', 'HASKS',
     'HASPS', 'HASTA', 'HASTE', 'HASTY', 'HATED', 'HATES', 'HATHA', 'HAUDS',
     'HAUFS', 'HAUGH', 'HAULD', 'HAULM', 'HAULS', 'HAULT', 'HAUNS', 'HAUSE', 'HAUTE',
@@ -12150,6 +12150,16 @@ export const wordleWords = [
         myScore: 3,
         wordNumber: 1571,
       },  
+      { word: "ANNOY",
+        gameDate: "10/8/25",
+        myScore: 4,
+        wordNumber: 1572,
+      },  
+      { word: "HARDY",
+        gameDate: "10/9/25",
+        myScore: 5,
+        wordNumber: 1573,
+      },  
     
   ];
 
@@ -12166,7 +12176,7 @@ console.log("Push, Stash, and Pop. What the Chryste!")
 console.log("August 4, 2025, Jackwagon. Dickerson. Eff On Off Guyo.")
 console.log("August 7, 2025, CORAL hits! Now what? Scion? Rinse? Caste? But CORAL HITS!")
 console.log("August 9, 2025, Mom: Hello" )
-console.log("October 6, 2025: Trump sux dykk000000000! NYLON")
+console.log("October 9, 2025: Trump sux dykk000000000! HARDY")
 
 
 console.log(wordleWords)
